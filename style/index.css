@@ -1,0 +1,561 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #333;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+
+li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+a {
+    color: #333;
+    outline: medium none;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+#header {
+    width: 100%;
+    height: 80px;
+    background-color: #000;
+}
+
+.header-content {
+    width: 1367.2px;
+    height: 80px;
+    font-size: 12px;
+    margin: 0 auto;
+}
+
+.header-content a {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header-content .converse-logo {
+    width: 163px;
+    height: 21.59px;
+    background: url(../image/header-footer-new3.png) no-repeat;
+    position: absolute;
+    left: 36px;
+    top: 32px;
+}
+
+.header-content .head-help {
+    height: 80px;
+    width: 80px;
+    float: right;
+    background: url(../image/help.jpg) no-repeat right;
+    cursor: pointer;
+}
+
+.header-content .head-search {
+    height: 80px;
+    width: 80px;
+    float: right;
+    cursor: pointer;
+    background: url(../image/search.jpg) no-repeat right;
+}
+
+.header-content .head-chatme {
+    height: 80px;
+    width: 80px;
+    float: right;
+    cursor: pointer;
+    background: url(../image/chatme.jpg) no-repeat right;
+}
+
+.header-content .head-cart-out {
+    height: 100%;
+    width: 116px;
+    float: right;
+    position: relative;
+}
+
+.header-content .head-cart {
+    height: 80px;
+    width: 38px;
+    float: right;
+    cursor: pointer;
+    ound: url(../image/carts.jpg) no-repeat right;
+}
+
+.header-content .head-cart-out span {
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 25px;
+}
+
+
+
+
+.header-content .head-sign-out {
+    height: 100%;
+    width: 150px;
+    float: right;
+    position: relative;
+
+}
+
+.header-content .head-sign-out .log-sign-button {
+
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+
+}
+
+.header-content .head-sign-out .loging span {
+    cursor: pointer;
+    position: relative;
+    left: -55px;
+    top: 5px;
+}
+
+
+
+.header-content .head-sign-out .loging .logingmenu {
+    background-color: #fff;
+    box-shadow: 0 1px 3px -1px #464646;
+    box-sizing: border-box;
+    height: 200px;
+    left: -60px;
+    position: absolute;
+    top: 50px;
+    width: 172px;
+    z-index: 101;
+    display: none;
+    padding-left: 0;
+    font-size: 12px;
+}
+
+.loging .logingmenu li {
+    line-height: 20px;
+    margin: 15px 0;
+    position: relative;
+    width: 100%;
+    float: left;
+    color: black;
+}
+
+#header .logingmenu li a {
+    width: 170px;
+    height: 20px;
+}
+
+#header .logingmenu li a:hover {
+    background-color: #000;
+    color: #fff;
+    -webkit-transition-duration: .3s;
+}
+
+
+
+.header-content .head-sign {
+    height: 80px;
+    width: 38px;
+    float: right;
+    cursor: pointer;
+    /* background: url(../image/users.jpg) no-repeat right; */
+}
+
+
+
+
+
+/*
+    隐藏登录注册页面
+*/
+
+.header-expanded {
+    width: 100%;
+    z-index: 101;
+    background-color: #fff;
+    position: relative;
+    display: none;
+}
+
+.header-expanded .header-expanded-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 317px;
+    display: block;
+    padding: 40px 0;
+}
+
+.expanded-box {
+    margin: 0 210px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+}
+
+.expanded-box .expanded-left {
+    float: left;
+    height: 100%;
+    width: 15%;
+    font-size: 150%;
+}
+
+.expanded-box .expanded-left p {
+    margin-bottom: 20px;
+}
+
+.expanded-box .expanded-left .create-button {
+    background-color: #000;
+    border: 1px solid #000;
+    color: #fff;
+    font-size: 18px;
+    height: 40px;
+    cursor: pointer;
+    line-height: 38px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.header-expanded .middle-line {
+    margin: 0 6%;
+    border-left: 1px solid #999;
+    height: 100%;
+    float: left;
+}
+
+.header-expanded .login-form p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.header-expanded .login-form #username {
+    border: 1px solid #999;
+    width: 300px;
+    height: 40px;
+    line-height: 30px;
+    padding: 5px 5px 5px 18px;
+    box-sizing: border-box;
+    background-color: #FFF;
+    font-family: "tradegothic";
+    margin-bottom: 20px;
+}
+
+.header-expanded .login-form #pass {
+    border: 1px solid #999;
+    width: 300px;
+    height: 40px;
+    line-height: 30px;
+    padding: 5px 5px 5px 18px;
+    box-sizing: border-box;
+    background-color: #FFF;
+    font-family: "tradegothic";
+    margin-bottom: 20px;
+}
+
+.header-expanded .login-form #loginCode {
+    float: left;
+    width: 142px;
+    border: 1px solid #999;
+    height: 40px;
+    line-height: 30px;
+    padding: 5px 5px 5px 18px;
+    box-sizing: border-box;
+    background-color: #FFF;
+    font-family: "tradegothic";
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.header-expanded .login-form .box {
+    width: 120px;
+    height: 40px;
+    float: left;
+    position: relative;
+    top: -20px;
+}
+
+.header-expanded .login-form .box p {
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    width: 25%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: rotate(7deg);
+    font-weight: bold;
+
+}
+
+.header-expanded .login-form .change {
+    text-decoration: black;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.header-expanded .login-form .login-waring {
+    float: left;
+}
+
+.header-expanded .login-form .xieyi {
+    position: relative;
+    left: 301px;
+    top: -100px;
+}
+
+.header-expanded .login-form .xieyi1 {
+
+    margin-top: 10px;
+    text-indent: 30px;
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+
+}
+
+.header-expanded .login-form #header-login {
+    height: 40px;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #000;
+    text-align: center;
+    box-sizing: border-box;
+    width: 300px;
+}
+
+
+.header-expanded-content .register-box {
+    width: 1000px;
+    height: 317px;
+}
+
+.header-expanded-content .register-box ul {
+    width: 1000px;
+    height: 95px;
+    list-style: none;
+
+}
+
+.header-expanded-content .register-box li {
+    font-size: 13px;
+    line-height: 20px;
+    width: 300px;
+    height: 95px;
+    float: left;
+    margin-right: 50px;
+}
+
+.header-expanded-content .register-box li:last-child {
+    margin-right: 0px;
+
+}
+
+.header-expanded-content .register-box input {
+    height: 40px;
+    width: 300px;
+}
+
+.header-expanded-content .register-box #validateCode-reg {
+    width: 142px;
+    height: 40px;
+    float: left;
+    position: relative;
+    top: 20px;
+}
+
+.header-expanded-content .register-box .box {
+    width: 120px;
+    height: 40px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+/* */
+.box p {
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    width: 25%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: rotate(7deg);
+    font-weight: bold;
+
+}
+
+/* */
+.header-expanded-content .register-box li:nth-of-type(3) input {
+    width: 100px;
+    height: 20px;
+}
+
+.header-expanded-content .register-box li:nth-of-type(3) div {
+    width: 150px;
+    height: 40px;
+    float: left;
+}
+
+.header-expanded .header-login {
+    background-color: #ccc;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
+    width: 300px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+
+
+.header-expanded .header-expanded-content #smallcheck {
+    width: 21.2px;
+    height: 21.2px;
+    border: 2px solid #000;
+}
+
+.header-expanded-content .register-box #registration-btn {
+    background-color: #ccc;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
+    width: 100%;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+.header-expanded-content .register-box span{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#nav {
+    background: none repeat scroll 0 0 #464646;
+    position: relative;
+    width: 100%;
+    z-index: 100;
+}
+
+#nav .nav-con {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#nav .nav-con .level1 {
+    display: inline-block;
+    zoom: 1;
+    height: 100%;
+    overflow: hidden;
+}
+
+#nav .nav-con .level1 li {
+    float: left;
+    height: inherit;
+    min-width: 110px;
+    padding: 0 12px;
+    position: relative;
+    cursor: pointer;
+}
+
+#nav .nav-con .level1 li a {
+    box-sizing: border-box;
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+    height: inherit;
+    line-height: inherit;
+    padding: 0 .625em;
+    text-transform: uppercase;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    zoom: 1;
+    *display: inline;
+}
+
+#nav .nav-con .level1 li a i {
+    border-color: white transparent transparent;
+    border-right: 6px solid transparent;
+    border-style: solid;
+    border-width: 6px;
+    position: absolute;
+    width: 0;
+    margin-left: -6px;
+    height: 0;
+    left: 50%;
+    bottom: 6px;
+}
+
+#homecon {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+}
+
+#homecon .nav-notice {
+    padding: 15px 0;
+}
+
+#slidecontent {
+    /* background-color: aqua; */
+}

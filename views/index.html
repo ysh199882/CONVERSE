@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/index.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="header-content">
+            <a href="#">
+                <div class="converse-logo">
+                </div>
+            </a>
+
+            <!-- <div class="header-con-rg"> -->
+            <div class="head-help" title="帮助">
+                <a href="#" title="帮助">
+
+                </a>
+            </div>
+            <div class="head-search" title="搜索"></div>
+            <div class="head-chatme" title="联系我们"></div>
+            <div class="head-cart-out">
+                <span class="cart-button" title="购物车">购物车</span>
+                <div class="head-cart">
+                    <img src="../image/carts.jpg" height="80px">
+                </div>
+            </div>
+
+            <div class="head-sign-out">
+
+                <div class="log-sign-button" >
+                    <div class="tologin" title="登录/注册" style="display: block;">
+                        <span class="login">登录 &nbsp; </span>
+                        <span>/ </span>
+                        <span class="register"> &nbsp; 注册</span>
+
+                    </div>
+
+                    <div class="loging" style="display: none;">
+                        <span class="welcome">欢迎你，15137842127</span>
+                        <ul class="logingmenu">
+                            <li> <a href="">我的账户</a> </li>
+                            <li> <a href="">我的订单</a> </li>
+                            <li> <a href="">我的优惠券</a> </li>
+                            <li class="exit"> <a href="">退出</a> </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="head-sign"> 
+                    <img class="login" src="../image/users.jpg" alt="" height="80px">
+                </div>
+
+            </div>
+
+
+            <!-- </div> -->
+        </div>
+    </div>
+    <div class="header-expanded">
+        <div class="header-expanded-content">
+            <div class="expanded-box">
+                <div class="expanded-left">
+                    <p>还未注册？</p>
+                    <span class="create-button">注册账户 >></span>
+                </div>
+
+                <div class="middle-line"></div>
+
+                <form action="" class="login-form" method="POST">
+                    <p>已经成为会员？</p>
+                    <input id='username' type="text" class="" name="loginName" placeholder="邮箱/手机号"></br>
+                    <input id="pass" type="password" name="loginPass" placeholder="账户密码"></br>
+                    <input id="loginCode"  type="text" placeholder="请输入验证码"></br>
+                    <div class="box"></div></br>
+                    <!-- <span class="change">换一张</span> </br> -->
+                    <div class="xieyi1">
+                        <input type="checkbox" name="" class="login-waring">
+                        <span class="xieyi">一旦登录，即表明您同意匡威更新的 隐私政策和使用规则</span>
+                        
+                              </br>
+                    </div>
+                    
+                    <!-- <input type="checkbox" name="" id="keeplogin">记住登录名</br> -->
+                    <input type="button" value="登录" class="header-login" id="registration-btn"></br>
+                </form>
+            </div>
+
+            <div class="register-box" style=" display:none;">
+                <ul>
+                    <li>手机号码 </br>
+                        <input id='mobile' maxlength="11" type="text" onkeyup="value=value.replace(/[^\d]/g,'')"
+                            placeholder="135xxxx3333"> </br>
+                        <span class="error">请输入11位有效中国手机号码</span>
+                    </li>
+
+                    <li>
+                        邮箱 </br>
+                        <input type="text" id="email" autocomplete="new-password" placeholder="example@converse.com">
+                        <span class="error">请输入有效的电子邮箱地址！</span>
+                    </li>
+
+                    <li>
+                        性别 </br>
+                        <div>
+                            <input type="radio" class="man" name="sex">男的
+                        </div>
+                        <div>
+                            <input type="radio" class="woman" name="sex"> 女的
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        输入密码
+                        <input type="password" id="password-reg" placeholder="密码至少为8位字符">
+                        <span class="error">请输入密码</span>
+                    </li>
+                    <li>
+                        确认密码
+                        <input type="password" id="passwordAgain-reg" placeholder="请再次输入密码">
+                        <span class="error">请再次输入密码</span>
+                        
+                    </li>
+                    <li>
+                        生日（年-月-日）
+                        <div class="selectbox">
+                            <select name="" id="birthy-year">
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                                <option value="2011">2011</option>
+                                <option value="2010">2010</option>
+                            </select>
+
+                            <select name="" id="birthy-month">
+                                <option value="0">1</option>
+                                <option value="1">2</option>
+                                <option value="2">3</option>
+                                <option value="3">4</option>
+                                <option value="4">5</option>
+                                <option value="5">6</option>
+                                <option value="6">7</option>
+                                <option value="7">8</option>
+                                <option value="8">9</option>
+                                <option value="9">10</option>
+                                <option value="10">11</option>
+                                <option value="11">12</option>
+                            </select>
+
+                            <select name="" id="birthy-date">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>验证码</p> 
+                        <input class="verifycode" type="text" id="validateCode-reg" placeholder="请输入验证码">
+                        
+                        <div class="box"></div> 
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="smallcheck">
+                        一旦创建账户，即表明您同意匡威更新的隐私 </br>
+                        政策和使用规则 </br>
+                        <div class="button" id="registration-btn" style="margin-top: 10px;" >注册账户</div>
+                    </li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <script src="../script/jquery-1.8.3.js"></script>
+    <script src="../script/login.js"></script>
+    <script src="../script/utils.js"></script>
+    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+   
+
+    <div id="nav" style="height:50px;line-height:35px;">
+        <div class="nav-con">
+            <ul class="level1">
+                <li class="category"><a class="hascategories" href=""> 男的 <i></i> </a> </li>
+                <li class="category"><a class="hascategories" href=""> 女的 <i></i> </a> </li>
+                <li class="category"><a class="hascategories" href=""> 儿童 <i></i> </a> </li>
+                <li class="category"><a class="hascategories" href=""> 情人节系列 <i></i> </a> </li>
+                <li class="category"><a class="hascategories" href=""> 折扣特惠 <i></i> </a> </li>
+                <li class="category"><a class="hascategories" href=""> 热卖推荐 <i></i> </a> </li>
+                <li class="category"><a class="hascategories" href=""> 品牌推荐 <i></i> </a> </li>
+            </ul>
+        </div>
+    </div>
+    <div id="body">
+
+        <div id="homecon" style="width: 1519px;">
+            <div class="nav-notice">
+                尊敬的客户您好，我们店铺不会泄露您的任何消费信息，敬请放心。另外，我们也不会主动要求获取、收集、使用任何消费者的金融消费类信息（如：信用卡信息）。如果接到索取以上信息的电话，是属于诈骗电话，请勿相信，以防个人的钱财损失。如您对订单有疑问，请联系在线客服。
+            </div>
+        </div>
+
+        <div id="slidecontent" style="height: 593px;width: 1519px;display: block;">
+
+        </div>
+
+
+        <div id=""></div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="footer">
+
+    </div>
+</body>
+
+</html>
