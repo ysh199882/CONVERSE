@@ -21,16 +21,6 @@ $('.create-button').click(function(){
     $('register-box').css('display','block')
 })
 
-//注册功能实现
-
-
-
-
-
-
-
-
-
 
 //账户下拉框
 $('.welcome').hover(function(){
@@ -118,10 +108,10 @@ $('.exit').click(function(){
     var account = $('#username').val()
     var password = $('#pass').val()
 
-    if (localStorage[account]) {
+    // if (localStorage[account]) {
 
-    }
-    if(account === '15137842127' && password === '199882OK'){
+    // }
+    if((account === storage['mobile'] || account == storage['email']) && password === storage['pass']){
         
         setCookie({
             key: 'login',
@@ -192,6 +182,7 @@ $('.exit').click(function(){
 //     removeCookie('user')
 // }
 
+//判断注册信息
 $(function(){
 
      //设置错误信息
@@ -203,7 +194,7 @@ $(function(){
     }
 
     //清除错误信息
-    function clearError(id,clas){
+    function clearError(id){
         $(id).css('border-color','#999')
         $(id).next().css('display','none')
     }
@@ -217,7 +208,7 @@ $(function(){
     }).focus(function(){
         // $('#mobile').css('border-color','#999')
         // $('.error').css('display','none')
-        clearError('#mobile','.error')
+        clearError('#mobile')
     })
 
     function checkMobile(id){
@@ -231,25 +222,25 @@ $(function(){
             return false
         }
 
-        
-        function setCookie() {
+        return true//这个返回值是为了在提交表单时校验所有表单元素的内容
+        // function setCookie() {
             
-        }
+        // }
     }
 
-    localStorage['Bender'] = JSON.stringify({
-        username: 'Bender',
-        password: '123456'
-    })
+    // localStorage['Bender'] = JSON.stringify({
+    //     username: 'Bender',
+    //     password: '123456'
+    // })
 
-    console.log(localStorage['Bender'])
+    // console.log(localStorage['Bender'])  
 
    
     //对邮箱进行验证
     $('#email').blur(function(){
         checkEmail('#email')
     }).focus(function(){
-        clearError('#email','.error')
+        clearError('#email')
     })
 
     function checkEmail(id){
@@ -257,18 +248,105 @@ $(function(){
         var $email = $(id).val()
 
         if(!reg.test($email)){
-            setError('#email','.error')
+            setError('#email')
             return false
         }
 
+        return true
     }
 
-    
+    //对密码进行验证
+    $('#password-reg').blur(function(){
+        checkPass('#password-reg')
+    }).focus(function(){
+        clearError('#password-reg')
+    })
 
+    function checkPass(id){
+        var reg = /^[\d]{6,10}$/
+        var $pass = $(id).val()
+
+        if(!reg.test($pass)){
+            setError(id)
+            return false
+        }
+        
+        return true
+    }
+
+
+    //重复密码
+
+    $('#passwordAgain-reg').blur(function(){
+        checkPassAgain('#password-reg','#passwordAgain-reg')
+        // console.log(11);
+    }).focus(function(){
+        clearError('#passwordAgain-reg')
+        // console.log(22);
+    });
+
+    function checkPassAgain(pwd1,pwd2){
+        var $pwd1 = $(pwd1).val();
+        var $pwd2 = $(pwd2).val();
+        // console.log($('pwd1'));
+        if($pwd1 != $pwd2){
+            setError(pwd2);
+            // console.log(333);
+            return false;
+        }
+
+        var reg = /^[\d]{6,10}$/;
+        if(!reg.test($pwd2)){
+            // console.log(444);
+            setError(pwd2);
+            return false;
+        }
+
+        return true;
+
+    }
+
+
+    //提交表单时校验所有表单元素
+
+    //待解决的问题，无法将验证码判定进来
+    $('#regform').submit(function(){
+        return checkAll();
+    });
+
+    function checkAll(){
+        if(checkMobile('#mobile')&&checkEmail('#email')&&checkPass('#password-reg')&&checkPassAgain('#password-reg','#passwordAgain-reg')&&Codeyan){
+            return true;
+        }
+        return false;
+    };
 
 
 })
 
+//判断协议是否勾选，改变注册按钮的样式
+
+$('.xieyi3 [type=checkbox]').change(function(){
+    if($(this).prop('checked')){
+        $('.regbutton').css('background-color','#000')
+    }else{
+        $('.regbutton').css('background-color','#ccc')
+    }
+})
+
+
+//注册按钮提交表单
+var storage = window.localStorage;
+$('.regbutton').click(function(){
+    storage['mobile'] = $('#mobile').val(),
+    storage['email'] = $('#email').val(),
+    storage['pass'] = $('#password-reg').val(),
+    alert('注册成功！')
+
+    $(".expanded-box").fadeIn(1)
+    $('.register-box').fadeOut(1)
+    $('register-box').css('display','block')
+})
 
 
 

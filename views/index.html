@@ -94,10 +94,11 @@
             </div>
 
             <div class="register-box" style=" display:none;">
+                <form action="" method="POST" id="regform">
                 <ul>
                     <li>手机号码 </br>
                         <input id='mobile' maxlength="11" type="text" onkeyup="value=value.replace(/[^\d]/g,'')"
-                            placeholder="135xxxx3333"> </br>
+                            placeholder="135xxxx3333"> 
                         <span class="error">请输入11位有效中国手机号码</span>
                     </li>
 
@@ -110,7 +111,7 @@
                     <li>
                         性别 </br>
                         <div>
-                            <input type="radio" class="man" name="sex">男的
+                            <input type="radio" class="man" name="sex" checked>男的
                         </div>
                         <div>
                             <input type="radio" class="woman" name="sex"> 女的
@@ -178,17 +179,19 @@
                     <li>
                         <p>验证码</p> 
                         <input class="verifycode" type="text" id="validateCode-reg" placeholder="请输入验证码">
+                        <span>请输入验证码</span>
                         
                         <div class="box"></div> 
                     </li>
-                    <li>
+                    <li class="xieyi3">
                         <input type="checkbox" name="" id="smallcheck">
                         一旦创建账户，即表明您同意匡威更新的隐私 </br>
                         政策和使用规则 </br>
-                        <div class="button" id="registration-btn" style="margin-top: 10px;" >注册账户</div>
+                        <input type="button" value="注册账户" class="button  regbutton" id="registration-btn" style="margin-top: 10px;" >
                     </li>
                     <li></li>
                 </ul>
+            </form>
             </div>
         </div>
 
