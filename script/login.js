@@ -1,5 +1,24 @@
+
+
+    // var storage = window.localStorage;
+    // var mobile = storage['mobile'];
+    // if(mobile){
+    //     console.log(mobile);
+    //     $('.tologin').css('display','none')
+    //     $('.loging').css('display','block')
+    //     // $('register-box').css('display','block')
+    //     // $('.loging').prepend(`<span class="welcome">欢迎你，${storage['mobile']}</span>`)
+    // }else{
+    //     $('.tologin').css('display','block')
+    //     $('.loging').css('display','none')
+    // }
+$(() => { //加这个是等待页面内信息加载后才
+})
+
+$(() => {
 //登录按钮下拉框
 $('.login').click(function(){
+    
     $('.header-expanded').slideDown('slow');
     $(".expanded-box").fadeIn(1)
     $('.register-box').fadeOut(1)
@@ -23,18 +42,34 @@ $('.create-button').click(function(){
 
 
 //账户下拉框
-$('.welcome').hover(function(){
-    // $('.logingmenu').slideDown('slow')
+// $('.welcome').hover(function(){
+//     // $('.logingmenu').slideDown('slow')
+//     $('.logingmenu').css('display','block')
+// },$('.logingmenu').mouseleave(function(){
+//     $('.logingmenu').slideUp('slow')
+// }))
+
+$('.head-sign-out').on('mouseenter','.welcome',function(){
     $('.logingmenu').css('display','block')
-},$('.logingmenu').mouseleave(function(){
-    $('.logingmenu').slideUp('slow')
-}))
+})
+   
+$('.logingmenu').mouseleave(function(){
+        $('.logingmenu').slideUp('slow')
+        $('#body').click(function(){
+            $('.header-expanded').slideUp('slow');
+        })
+})
+
+//购物车按钮
 
 //退出账户
 $('.exit').click(function(){
     alert('您已成功退出！')
     window.location.reload();
-
+    removeCookie('login')
+   $('.welcome').remove()
+    $('.loging').css('display','none')
+    $('.log-sign-button').css('display','block')
 })
 
 
@@ -147,9 +182,9 @@ $('.exit').click(function(){
         }
 
         alert('登录成功')
-
+        $('.loging').prepend(`<span class="welcome">欢迎你，${storage['mobile']}</span>`)
         //登录成功页面展示
-        $('.header-expanded').slideUp('slow');
+        $('.header-expanded').slideUp('slow')
         $('.tologin').css('display','none')
         $('.loging').css('display','block')
 
@@ -194,7 +229,7 @@ $(function(){
     }
 
     //清除错误信息
-    function clearError(id){
+    function clearError(id){ 
         $(id).css('border-color','#999')
         $(id).next().css('display','none')
     }
@@ -346,14 +381,131 @@ $('.regbutton').click(function(){
     $(".expanded-box").fadeIn(1)
     $('.register-box').fadeOut(1)
     $('register-box').css('display','block')
+
+    // $('.loging').prepend(`<span class="welcome">欢迎你，'${storage['mobile']}'</span>`)
+})
+
+//登户名
+
+ 
+
+
+/**********************************************************/
+
+// 首页导航下拉框
+
+
+$('.nav-man1').mouseenter(function(){
+    $('#nav').trigger('mouseleave')
+    $('.nav-man').slideDown('slow')
+    $('.nav-man').fadeIn('slow')
+    $('.nav-man').css('display','block')
+    $('.nav-man').css('opacity','1')
+})
+
+
+$('.nav-woman1').mouseenter(function(){
+    $('#nav').trigger('mouseleave')
+    $('.nav-woman').slideDown('slow')
+    $('.nav-woman').fadeIn('slow')
+    $('.nav-woman').css('display','block')
+    $('.nav-woman').css('opacity','1')
+})
+
+$('.nav-child1').mouseenter(function(){
+    $('#nav').trigger('mouseleave')
+    $('.nav-child').slideDown('slow')
+    $('.nav-child').fadeIn('slow')
+    $('.nav-child').css('display','block')
+    $('.nav-child').css('opacity','1')
+})
+
+$('.nav-chunjie1').mouseenter(function(){
+    $('#nav').trigger('mouseleave')
+    $('.nav-chunjie').slideDown('slow')
+    $('.nav-chunjie').fadeIn('slow')
+    $('.nav-chunjie').css('display','block')
+    $('.nav-chunjie').css('opacity','1')
+})
+
+
+$('#nav').mouseleave(function(){
+    let navs = $('#navexpanded').find('> div')
+    navs.fadeOut('slow')
+    navs.css('display','none')
+    navs.css('opacity','0')
 })
 
 
 
 
 
+// $('.nav-woman1').mouseleave(function(){
+//     // $('.nav-man').slideUp('slow')
+//     $('.nav-woman').fadeOut('slow')
+//     $('.nav-woman').css('display','none')
+//     $('.nav-woman').css('opacity','0')
+// })
+
+// $('.nav-woman').mouseleave(function(){
+//     // $('.nav-man').slideUp('slow')
+//     $('.nav-woman').fadeOut('slow')
+//     $('.nav-woman').css('display','none')
+//     $('.nav-woman').css('opacity','0')
+// })
 
 
 
 
+// $('.nav-child1').mouseleave(function(){
+//     // $('.nav-man').slideUp('slow')
+//     $('.nav-child').fadeOut('slow')
+//     $('.nav-child').css('display','none')
+//     $('.nav-child').css('opacity','0')
+// })
 
+// $('.nav-child').mouseleave(function(){
+//     // $('.nav-man').slideUp('slow')
+//     $('.nav-child').fadeOut('slow')
+//     $('.nav-child').css('display','none')
+//     $('.nav-child').css('opacity','0')
+// })
+
+
+
+// $('.nav-chunjie1').mouseleave(function(){
+//     // $('.nav-man').slideUp('slow')
+//     $('.nav-chunjie').fadeOut('slow')
+//     $('.nav-chunjie').css('display','none')
+//     $('.nav-chunjie').css('opacity','0')
+// })
+
+// $('.nav-chunjie').mouseleave(function(){
+//     // $('.nav-man').slideUp('slow')
+//     $('.nav-chunjie').fadeOut('slow')
+//     $('.nav-chunjie').css('display','none')
+//     $('.nav-chunjie').css('opacity','0')
+// })
+
+
+
+
+// $(function(){
+//     $('li').on('mouseenter',function(event){
+//         var classname = (event.target.className).split('category')[1]
+//     })
+
+//     function enter(cla){
+//         $(cla).slideDown('slow')
+//         $(cla).fadeIn('slow')
+//         $(cla).css('display','block')
+//         $(cla).css('opacity','1')
+//         console.log(111);
+//     }
+    
+  
+// })
+
+
+
+})

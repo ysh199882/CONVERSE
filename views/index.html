@@ -7,9 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/swiper.min.css">
 </head>
 
 <body>
+
+    <script src="../script/jquery-1.8.3.js"></script>
+    <script src="../script/login.js"></script>
+    <script src="../script/utils.js"></script>
+    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="../script/swiper.jquery.min.js"></script>
+    <script src="../script/goodlist1.js"></script>
+
+
     <div id="header">
         <div class="header-content">
             <a href="#">
@@ -25,7 +35,7 @@
             </div>
             <div class="head-search" title="搜索"></div>
             <div class="head-chatme" title="联系我们"></div>
-            <div class="head-cart-out">
+            <div class="head-cart-out" onclick="window.open('../views/goodlist.html','_self')">
                 <span class="cart-button" title="购物车">购物车</span>
                 <div class="head-cart">
                     <img src="../image/carts.jpg" height="80px">
@@ -42,8 +52,8 @@
 
                     </div>
 
-                    <div class="loging" style="display: none;">
-                        <span class="welcome">欢迎你，15137842127</span>
+            <div class="loging" style="display: none;">
+                        <!-- <span class="welcome">欢迎你，15137842127</span> -->
                         <ul class="logingmenu">
                             <li> <a href="">我的账户</a> </li>
                             <li> <a href="">我的订单</a> </li>
@@ -196,52 +206,357 @@
         </div>
 
     </div>
-    <script src="../script/jquery-1.8.3.js"></script>
-    <script src="../script/login.js"></script>
-    <script src="../script/utils.js"></script>
-    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
-   
+    
 
     <div id="nav" style="height:50px;line-height:35px;">
         <div class="nav-con">
             <ul class="level1">
-                <li class="category"><a class="hascategories" href=""> 男的 <i></i> </a> </li>
-                <li class="category"><a class="hascategories" href=""> 女的 <i></i> </a> </li>
-                <li class="category"><a class="hascategories" href=""> 儿童 <i></i> </a> </li>
-                <li class="category"><a class="hascategories" href=""> 情人节系列 <i></i> </a> </li>
-                <li class="category"><a class="hascategories" href=""> 折扣特惠 <i></i> </a> </li>
-                <li class="category"><a class="hascategories" href=""> 热卖推荐 <i></i> </a> </li>
-                <li class="category"><a class="hascategories" href=""> 品牌推荐 <i></i> </a> </li>
+                <li class="category nav-man1"><a class="hascategories" href="../views/man.html"> 男的 <i></i> </a> </li>
+                <li class="category nav-woman1"><a class="hascategories" href="../views/woman.html"> 女的 <i></i> </a> </li>
+                <li class="category nav-child1"><a class="hascategories" href="../views/child.html"> 儿童 <i></i> </a> </li>
+                <!-- <li class="category"><a class="hascategories" href=""> 情人节系列 <i></i> </a> </li> -->
+                <li class="category nav-chunjie1"><a class="hascategories" href="../views/youhui.html"> 折扣特惠 <i></i> </a> </li>
+                <!-- <li class="category"><a class="hascategories" href=""> 热卖推荐 <i></i> </a> </li>
+                <li class="category"><a class="hascategories" href=""> 品牌推荐 <i></i> </a> </li> -->
             </ul>
         </div>
+        
+        <div id="navexpanded">
+
+            <div class="nav-expanded nav-woman">
+                <ul class="linenav">
+                    <li>
+                        <img src="../image/02-1.jpg" alt="">
+                        <span>踩得</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-2.jpg" alt="">
+                        <span>穿的</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-3.jpg" alt="">
+                        <span>戴的</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-4.jpg" alt="">
+                        <span>外套</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-5.jpg" alt="">
+                        <span>裤装</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-6.jpg" alt="">
+                        <span>当季新色系列</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-7.jpg" alt="">
+                        <span>厚底鞋系列</span>
+                    </li>
+                </ul>
+                <div class="centerline"></div>
+                <ul class="linenav">
+                    <li>
+                        <img src="../image/02-22.jpg" alt="">
+                        <span>经典款</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-23.jpg" alt="">
+                        <span>CHUCK 70</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-24.jpg" alt="">
+                        <span>ALL STAR</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-25.jpg" alt="">
+                        <span>ONE STAR</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-26.jpg" alt="">
+                        <span>JACK PURCELL</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-27.jpg" alt="">
+                        <span>PRO LEATHER</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-28.jpg" alt="">
+                        <span>CONS</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-expanded nav-man">
+                <ul class="linenav">
+                    <li>
+                        <img src="../image/navman1.jpg" alt="">
+                        <span>踩得</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-2.jpg" alt="">
+                        <span>穿的</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-3.jpg" alt="">
+                        <span>戴的</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-4.jpg" alt="">
+                        <span>外套</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-5.jpg" alt="">
+                        <span>裤装</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-6.jpg" alt="">
+                        <span>当季新色系列</span>
+                    </li>
+                </ul>
+                <div class="centerline"></div>
+                <ul class="linenav">
+                    <li>
+                        <img src="../image/01-11.jpg" alt="">
+                        <span>经典款</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-12.jpg" alt="">
+                        <span>CHUCK 70</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-13.jpg" alt="">
+                        <span>ALL STAR</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-14.jpg" alt="">
+                        <span>ONE STAR</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-15.jpg" alt="">
+                        <span>JACK PURCELL</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-16.jpg" alt="">
+                        <span>PRO LEATHER</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-17.jpg" alt="">
+                        <span>CONS</span>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="nav-expanded nav-child">
+                <ul class="linenav">
+                    <li>
+                        <img src="../image/3-1.png" alt="">
+                    </li>
+                    <li>
+                        <img src="../image/3-2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="../image/3-3.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="nav-expanded nav-chunjie">
+                <ul class="linenav">
+                    <li>
+                        <img src="../image/4-1.jpg" alt="">
+                        <span>男子优惠</span>
+                    </li>
+                    <li>
+                        <img src="../image/4-2.jpg" alt="">
+                        <span>女子优惠</span>
+                    </li>
+                    <li>
+                        <img src="../image/4-3.jpg" alt="">
+                        <span>儿童优惠</span>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+
     </div>
     <div id="body">
 
-        <div id="homecon" style="width: 1519px;">
+    <div id="homecon" style="width: 1519px;">
             <div class="nav-notice">
                 尊敬的客户您好，我们店铺不会泄露您的任何消费信息，敬请放心。另外，我们也不会主动要求获取、收集、使用任何消费者的金融消费类信息（如：信用卡信息）。如果接到索取以上信息的电话，是属于诈骗电话，请勿相信，以防个人的钱财损失。如您对订单有疑问，请联系在线客服。
             </div>
-        </div>
-
-        <div id="slidecontent" style="height: 593px;width: 1519px;display: block;">
-
-        </div>
-
-
-        <div id=""></div>
     </div>
 
+    <!-- <div id="slidecontent" style="height: 629px;width: 1519px;display: block;"> -->
 
+     <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../image/swip1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../image/swip2.gif" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../image/swip3.jpg" alt="">
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+            
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+    </div>
+    
+    <div class='brand-segments'>
+        <div class="category-title">
+            <h1>热卖单品</h1>
+        </div>
 
+        <div class="clearfix">
 
+            <div class="bs-container">
+                <a href="#" class="bs-title">男的踩得</a>
 
+                <a href="#">
+                    <img src="../image/man.jpg" alt="">
+                </a>
+            </div>
+            <div class="bs-container">
+                <a href="#" class="bs-title">女的踩得</a>
 
+                <a href="#">
+                    <img src="../image/woman.jpg" alt="">
+                </a>
+            </div>
+            <div class="bs-container">
+                <a href="#" class="bs-title">穿的</a>
 
+                <a href="#">
+                    <img src="../image/chuande.jpg" alt="">
+                </a>
+            </div>
+            <div class="bs-container">
+                <a href="#" class="bs-title">戴的</a>
 
+                <a href="#">
+                    <img src="../image/daide.jpg" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="brand-menu-container ">
+            <div class="brand-menu"></div>
+        </div>
+
+        <!-- <div id="list-con-sneaker" class="list-con">
+        </div>
+        <div id="list-con-kids" class="list-con"></div>
+        <div id="list-con-cloth" class="list-con"></div>
+        <div id="list-con-accessories" class="list-con"></div> -->
+
+        <div class="l-s-grid">
+            <!-- <div class="brand-product">
+                <dl>
+                    <dt>
+                        <a href=""><img src="../image/1111.png" alt=""></a>
+                    </dt>
+                    <dd class="p-l-name">男女同款111111111111</dd>
+                    <dd class="p-l-price">22</dd>
+                </dl>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="content-bottom">
+        <div class="specialfeature">
+            <div class="specialfeature-title">
+                <img src="../image/logo-icon 2.png" alt="">
+                <span>街头先型</span>
+            </div>
+            <div class="specialfeature-main clearfix">
+                <div class="product-left">
+                    <img src="../image/bottom-img1.jpg" alt="">
+                    <h1>简约不简单 厚底新灵感</h1>
+                    <div class="buy-button">
+                        <a href="" class="product-buy">查看更多</a>
+                    </div>
+                </div>
+                <div class="product-reight">
+                    <img src="../image/bottom-img2.jpg" alt="">
+                    <h1>意大利设计</h1>
+                    <div class="buy-button">
+                        <a href="" class="product-buy">查看更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="specialfeature">
+            <div class="specialfeature-title">
+                <img src="../image/logo-icon 2.png" alt="">
+                <span>至尊精玩 玩转潮流</span>
+            </div>
+            <div class="specialfeature-main clearfix">
+                <div class="specialfeaturetwo">
+                    <img src="../image/bottom-img3.jpg" alt="">
+                    <h1>皮感加持 质感进阶</h1>
+                    <div class="buy-button">
+                        <a href="" class="product-buy">查看更多</a>
+                    </div>
+                </div>
+                <div class="specialfeaturetwo">
+                    <img src="../image/bottom-img4 (1).jpg" alt="">
+                    <h1>多来点，再多来点颜色</h1>
+                    <div class="buy-button">
+                        <a href="" class="product-buy">查看更多</a>
+                    </div>
+                </div>
+                <div class="specialfeaturetwo">
+                    <img src="../image/bottom-img5.jpg" alt="">
+                    <h1>环保再生系列</h1>
+                    <div class="buy-button">
+                        <a href="" class="product-buy">查看更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="infomation-attention">
+            <h1>关注CONVERSE</h1>
+            <p>Converse同时活跃在各类社交网络平台，点击下列你所喜爱的常用社交平台，密切关注Converse的最新产品与资讯。</p>
+            <div class="infor-link">
+                <a href="" class="weibo"></a>
+                <a href="" class="weixin"></a>
+            </div>
+        </div>
+    </div>
 
     <div id="footer">
 
     </div>
 </body>
 
+<script>
+  var mySwiper = new Swiper ('.swiper-container', {
+    // direction: 'vertical', // 垂直切换选项
+    loop: true, // 循环模式选项
+
+    autoplay: 3000,
+    
+
+    // 如果需要分页器
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+  })        
+</script>
 </html>

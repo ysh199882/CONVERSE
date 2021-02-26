@@ -463,29 +463,7 @@ a {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 首页导航栏的下拉框 */
 #nav {
     background: none repeat scroll 0 0 #464646;
     position: relative;
@@ -494,8 +472,8 @@ a {
 }
 
 #nav .nav-con {
-    height: 100%;
-    width: 100%;
+    height: 50px;
+    width: 1520px;
     margin: 0 auto;
     text-align: center;
 }
@@ -528,8 +506,6 @@ a {
     display: inline-block;
     *display: inline;
     zoom: 1;
-    zoom: 1;
-    *display: inline;
 }
 
 #nav .nav-con .level1 li a i {
@@ -545,6 +521,48 @@ a {
     bottom: 6px;
 }
 
+.nav-expanded {
+    width: 100%;
+    height: 300px;
+    background-color: #fff;
+    opacity: 0;
+    display: none;
+    z-index: 11111;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.nav-expanded ul{
+    list-style: none;
+    float: left;
+    width: 1000px;
+    height: 130px;
+    margin: 0,auto;
+}
+
+.nav-expanded li{
+    float: left;
+    width: 130px;
+    height: auto;
+    position: relative;
+    left: 300px ;
+}
+
+.nav-expanded li span{
+    position: relative;
+    left: 40px;
+    top: -40px;
+}
+
+.centerline{
+    background-color: #b7b7b7;
+    width: 100%;
+    height: 1px;
+    clear: both;
+}
+
+/* 文字提示 */
 #homecon {
     width: 100%;
     height: auto;
@@ -556,6 +574,295 @@ a {
     padding: 15px 0;
 }
 
+/* 轮播图 */
 #slidecontent {
-    /* background-color: aqua; */
+    background-color: lightcoral;
 }
+
+
+.swiper-container {
+    width: 1519px;
+    height: 593.2px;
+}
+
+.swiper-slide img{
+    width: 1519px;
+    height: 593.2px;
+}
+
+.swiper-container{
+    --swiper-theme-color: #ff6600;
+    --swiper-pagination-color: #00ff33;/* 两种都可以 */
+  }
+
+
+/* 热卖单品 */
+.category-title {
+    height: 30px;
+    margin: 20px auto;
+    max-width: 1000px;
+    position: relative;
+    text-align: center;
+}
+
+.category-title:before {
+    background-color: #b7b7b7;
+    content: "";
+    height: 1px;
+    left: 1.5%;
+    position: absolute;
+    top: 15px;
+    width: 97%;
+}
+
+.category-title h1 {
+    background: none repeat scroll 0 0 #fff;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+    padding: 0 4%;
+    position: relative;
+    font-size: 30px;
+}
+
+
+/* 导航栏 */
+.brand-segments {
+    max-width: 1000px;
+    width: 100%;
+    margin: 35px auto 0;
+}
+
+.brand-segments .bs-container {
+    width: 24%;
+    float: left;
+    display: inline;
+    margin-top: 20px;
+    text-align: center;
+}
+
+a {
+    color: #333;
+    outline: medium none;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.clearfix{
+    width: 1000px;
+    height: 250px;
+}
+
+
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.brand-segments .bs-container .bs-title {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+/* 第二根分界线 */
+.brand-menu-container:before {
+    width: 97%;
+    background-color: #b7b7b7;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 1.5%;
+    content: "";
+}
+
+/* 首页的数据 */
+.l-s-grid{
+    width: 1000px;
+    height: 727px;
+    /* background-color: #ccc; */
+
+}
+
+.l-s-grid dl{
+    width: 25%;
+    height: 300px;
+    float: left;
+    position: relative;
+    font-size: 14px;
+    /* box-sizing: border-box; */
+}
+.l-s-grid dl img{
+    width: 165px;
+    height: 165px;
+}
+.l-s-grid dt{
+    width: 165px;
+    height: 180px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 10px;
+}
+.brand-segments .l-s-grid .p-l-name {
+    height: 55px;
+    margin-bottom: 5px;
+    font-size: 100%;
+}
+
+.l-s-grid dd{
+    width: 100%;
+    text-align: center;
+    line-height: 18px;
+}
+
+
+/* 底部商品信息栏 */
+
+.content-bottom{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 80px auto 0;
+}
+
+.specialfeature{
+    max-width: 1000px;
+    margin: 40px auto 0;
+    overflow: hidden;
+}
+
+.specialfeature .specialfeature-title{
+    width: 100%;
+    height: 40px;
+    background-color: #464646;
+    color: #FFF;
+    font-size: 18px;
+}
+
+.specialfeature .specialfeature-title img{
+    margin: 10px 11px 0 20px;
+    float: left;
+}
+
+.specialfeature .specialfeature-title span{
+    margin: 10px 0 0 0;
+    float: left;
+}
+
+.specialfeature-main .product-left{
+    float: left;
+    margin-left: 0;
+    width: 48.8%;
+    height: auto;
+    margin-top: 30px;
+}
+
+.specialfeature-main  h1{
+    font-size: 24px;
+    margin:17px 0 17px 0;
+    color: #000;
+}
+
+.specialfeature-main .product-left .buy-button{
+    margin-top: 16px;
+}
+
+.specialfeature-main .product-left .product-buy{
+    line-height: 48px;
+    font-size: 16px;
+    height: 48px;
+    padding: 0 3px 0 7px;
+    border: 1px solid #000;
+    text-align: center;
+    display: inline-block;
+    zoom: 1;
+    width: 38%;
+    background-color: #000;
+    color: #fff;
+
+}
+
+.specialfeature-main .product-reight{
+    margin-right: 2px;
+    float: right;
+    margin-top: 30px;
+}
+.specialfeature-main  .specialfeaturetwo{
+    width: 32%;
+    float: left;
+    margin-left: 1.92%;
+    margin-top: 30px;
+}
+.specialfeature-main  .specialfeaturetwo:first-child{
+    margin-left: 0;
+}
+
+.specialfeature-main .product-reight .product-buy{
+    line-height: 48px;
+    font-size: 16px;
+    height: 48px;
+    padding: 0 3px 0 7px;
+    border: 1px solid #000;
+    text-align: center;
+    display: inline-block;
+    zoom: 1;
+    width: 38%;
+    background-color: #000;
+    color: #fff;
+
+}
+
+
+.content-bottom .infomation-attention{
+    height: auto;
+    margin: 80px 0 0 0 ;
+    background-color: #464646;
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+}
+
+.content-bottom .infomation-attention .infor-link{
+    width: 210px;
+    margin: 37px auto 0;
+    height: auto;
+    text-align: center;
+    padding-bottom: 120px;
+
+}
+
+.content-bottom .infomation-attention a{
+    background: url(../image/share2.png) no-repeat transparent;
+    width: 75px;
+    height: 75px;
+    display: block;
+    float: left;
+    margin: 0 15px;
+    text-align: -11111px;
+    padding: 0;
+}
+
+.content-bottom .infomation-attention .weibo{
+    background-position: -75px 0;
+}
+
+.content-bottom .infomation-attention .weixin{
+    background-position: -75px -75px;
+}
+
+.infomation-attention h1{
+    font-size: 30px;
+    margin: 78px auto 35px;
+    display: inline-block;
+}
+.infomation-attention p{
+    font-size: 16px;
+    line-height: 24px;
+}
+

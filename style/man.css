@@ -1,0 +1,188 @@
+.category-title-man:before {
+    background-color: #b7b7b7;
+    content: "";
+    height: 1px;
+    left: 1.5%;
+    position: absolute;
+    top: 15px;
+    width: 97%;
+}
+
+.category-title-man h1{
+    font-size: 30px;
+    padding: 0 4%;
+    background: none repeat scroll 0 0 #fff;
+    display: inline-block;
+    zoom: 1;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+    padding: 0 4%;
+    position: relative;
+    font-size: 30px;
+}
+
+.category-title-man{
+    height: 30px;
+    margin: 20px auto;
+    max-width: 1000px;
+    position: relative;
+    text-align: center;
+}
+
+/* 左边导航栏 */
+.product-content{
+    max-width: 1000px;
+    height: auto;
+    margin: 20px auto 0;
+}
+.product-content-left{
+    width: 25%;
+    float: left;
+}
+
+.product-content-left .filterwrapper{
+    width: 88.88%;
+}
+
+.product-content-left .filtertop{
+    border-bottom: 1px solid #b7b7b7;
+    height: 48px;
+    line-height: 48px;
+    width: 100%;
+}
+
+.filtertop span{
+    font-size: 18px;
+}
+
+.filter-category{
+    width: auto;
+    height: auto;
+    margin: 0 0 40px 0;
+    padding: 0 8.18%;
+    border: 1px solid #b7b7b7;
+    box-sizing: border-box;
+}
+
+.filter-category .resetbtn{
+    width: 100%;
+    height: 30px;
+    line-height: 15px;
+    text-align: right;
+}
+
+.filter-category-detail{
+    width: 100%;
+    margin-top: 10px;
+}
+.filter-category-detai dl{
+    border-top: 1px solid #b7b7b7;
+    padding: 18px 0 5px 0;
+    overflow: hidden;
+    height: 25px;
+    
+}
+.filter-category-detail dl dt{
+    font-size: 18px;
+    margin-bottom: 18px;
+    font-weight: bold;
+    background: url(../image/plus.png) no-repeat right center;
+}
+.filter-category-detail dl dd{
+    background-color: #fff;
+    border: 1px solid #b7b7b7;
+    box-sizing: border-box;
+    content: "";
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    float: left;
+    height: 16px;
+    margin-left: 2px;
+    margin-right: 5px;
+    margin-top: 5px;
+    width: 16px;
+}
+
+
+/* 右边导航栏 */
+.product-content-right{
+    width: 75%;
+    float: left;
+    height: auto;
+    position: relative;
+}
+
+.product-content-right .product-list-top{
+    width: 100%;
+    line-height: 40px;
+    margin-bottom: 30px;
+    float: left;
+}
+
+.sortbox{
+    float:none;
+    font-size: 14px;
+}
+
+.sortbox .sorttitle{
+    margin: 0 20px;
+    float: left;
+}
+
+.sortbox .sort-list a.active{
+    background: #000;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+.sort-list a{
+    padding: 3px 15px;
+    border: 1px solid #ccc;
+}
+a{
+    color: #333;
+    outline: medium none;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.product-content-right dl{
+    width: 33.3333%;
+    height: 300px;
+    float: left;
+    position: relative;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.product-content-right dt{
+    width: 165px;
+    margin: 0 auto;
+    height: 180px;
+    position: relative;
+    padding-top: 10px;
+}
+.product-content-right dl dt img{
+    width: 165px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 9.1%;
+}
+
+.product-content-right dl dd .p-l-name{
+    height: 55px;
+    margin-bottom: 5px;
+}
+.product-content-right dl dd .p-l-price{
+    font-weight: bold;
+}
+
+.product-content-right dl dd{
+    width: 100%;
+    text-align: center;
+    line-height: 18px;
+}
+
+

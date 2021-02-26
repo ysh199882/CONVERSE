@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/man.css">
+</head>
+<body>
+    <script src="../script/jquery-1.8.3.js"></script>
+    <script src="../script/login.js"></script>
+    <script src="../script/man.js"></script>
+
+    <div id="header">
+        <div class="header-content">
+            <a href="../views/index.html">
+                <div class="converse-logo">
+                </div>
+            </a>
+
+            <!-- <div class="header-con-rg"> -->
+            <div class="head-help" title="帮助">
+                <a href="#" title="帮助">
+
+                </a>
+            </div>
+            <div class="head-search" title="搜索"></div>
+            <div class="head-chatme" title="联系我们"></div>
+            <div class="head-cart-out" onclick="window.open('../views/goodlist.html','_self')">
+                <span class="cart-button" title="购物车">购物车</span>
+                <div class="head-cart">
+                    <img src="../image/carts.jpg" height="80px">
+                </div>
+            </div>
+
+            <div class="head-sign-out">
+
+                <div class="log-sign-button" >
+                    <div class="tologin" title="登录/注册" style="display: block;">
+                        <span class="login">登录 &nbsp; </span>
+                        <span>/ </span>
+                        <span class="register"> &nbsp; 注册</span>
+
+                    </div>
+
+            <div class="loging" style="display: none;">
+                        <!-- <span class="welcome">欢迎你，15137842127</span> -->
+                        <ul class="logingmenu">
+                            <li> <a href="">我的账户</a> </li>
+                            <li> <a href="">我的订单</a> </li>
+                            <li> <a href="">我的优惠券</a> </li>
+                            <li class="exit"> <a href="">退出</a> </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="head-sign"> 
+                    <img class="login" src="../image/users.jpg" alt="" height="80px">
+                </div>
+
+            </div>
+
+
+            <!-- </div> -->
+        </div>
+    </div>
+    <div class="header-expanded">
+        <div class="header-expanded-content">
+            <div class="expanded-box">
+                <div class="expanded-left">
+                    <p>还未注册？</p>
+                    <span class="create-button">注册账户 >></span>
+                </div>
+
+                <div class="middle-line"></div>
+
+                <form action="" class="login-form" method="POST">
+                    <p>已经成为会员？</p>
+                    <input id='username' type="text" class="" name="loginName" placeholder="邮箱/手机号"></br>
+                    <input id="pass" type="password" name="loginPass" placeholder="账户密码"></br>
+                    <input id="loginCode"  type="text" placeholder="请输入验证码"></br>
+                    <div class="box"></div></br>
+                    <!-- <span class="change">换一张</span> </br> -->
+                    <div class="xieyi1">
+                        <input type="checkbox" name="" class="login-waring">
+                        <span class="xieyi">一旦登录，即表明您同意匡威更新的 隐私政策和使用规则</span>
+                        
+                              </br>
+                    </div>
+                    
+                    <!-- <input type="checkbox" name="" id="keeplogin">记住登录名</br> -->
+                    <input type="button" value="登录" class="header-login" id="registration-btn"></br>
+                </form>
+            </div>
+
+            <div class="register-box" style=" display:none;">
+                <form action="" method="POST" id="regform">
+                <ul>
+                    <li>手机号码 </br>
+                        <input id='mobile' maxlength="11" type="text" onkeyup="value=value.replace(/[^\d]/g,'')"
+                            placeholder="135xxxx3333"> 
+                        <span class="error">请输入11位有效中国手机号码</span>
+                    </li>
+
+                    <li>
+                        邮箱 </br>
+                        <input type="text" id="email" autocomplete="new-password" placeholder="example@converse.com">
+                        <span class="error">请输入有效的电子邮箱地址！</span>
+                    </li>
+
+                    <li>
+                        性别 </br>
+                        <div>
+                            <input type="radio" class="man" name="sex" checked>男的
+                        </div>
+                        <div>
+                            <input type="radio" class="woman" name="sex"> 女的
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        输入密码
+                        <input type="password" id="password-reg" placeholder="密码至少为8位字符">
+                        <span class="error">请输入密码</span>
+                    </li>
+                    <li>
+                        确认密码
+                        <input type="password" id="passwordAgain-reg" placeholder="请再次输入密码">
+                        <span class="error">请再次输入密码</span>
+                        
+                    </li>
+                    <li>
+                        生日（年-月-日）
+                        <div class="selectbox">
+                            <select name="" id="birthy-year">
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                                <option value="2011">2011</option>
+                                <option value="2010">2010</option>
+                            </select>
+
+                            <select name="" id="birthy-month">
+                                <option value="0">1</option>
+                                <option value="1">2</option>
+                                <option value="2">3</option>
+                                <option value="3">4</option>
+                                <option value="4">5</option>
+                                <option value="5">6</option>
+                                <option value="6">7</option>
+                                <option value="7">8</option>
+                                <option value="8">9</option>
+                                <option value="9">10</option>
+                                <option value="10">11</option>
+                                <option value="11">12</option>
+                            </select>
+
+                            <select name="" id="birthy-date">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>验证码</p> 
+                        <input class="verifycode" type="text" id="validateCode-reg" placeholder="请输入验证码">
+                        <span>请输入验证码</span>
+                        
+                        <div class="box"></div> 
+                    </li>
+                    <li class="xieyi3">
+                        <input type="checkbox" name="" id="smallcheck">
+                        一旦创建账户，即表明您同意匡威更新的隐私 </br>
+                        政策和使用规则 </br>
+                        <input type="button" value="注册账户" class="button  regbutton" id="registration-btn" style="margin-top: 10px;" >
+                    </li>
+                    <li></li>
+                </ul>
+            </form>
+            </div>
+        </div>
+
+    </div>
+    
+
+    <div id="nav" style="height:50px;line-height:35px;">
+        <div class="nav-con">
+            <ul class="level1">
+                <li class="category nav-man1"><a class="hascategories" href="#"> 男的 <i></i> </a> </li>
+                <li class="category nav-woman1"><a class="hascategories" href="../views/woman.html"> 女的 <i></i> </a> </li>
+                <li class="category nav-child1"><a class="hascategories" href="../views/child.html"> 儿童 <i></i> </a> </li>
+                <!-- <li class="category"><a class="hascategories" href=""> 情人节系列 <i></i> </a> </li> -->
+                <li class="category nav-chunjie1"><a class="hascategories" href="../views/youhui.html"> 折扣特惠 <i></i> </a> </li>
+                <!-- <li class="category"><a class="hascategories" href=""> 热卖推荐 <i></i> </a> </li>
+                <li class="category"><a class="hascategories" href=""> 品牌推荐 <i></i> </a> </li> -->
+            </ul>
+        </div>
+        
+        <div id="navexpanded">
+
+            <div class="nav-expanded nav-woman">
+                <ul class="linenav">
+                    <li>
+                        <img src="../image/02-1.jpg" alt="">
+                        <span>踩得</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-2.jpg" alt="">
+                        <span>穿的</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-3.jpg" alt="">
+                        <span>戴的</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-4.jpg" alt="">
+                        <span>外套</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-5.jpg" alt="">
+                        <span>裤装</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-6.jpg" alt="">
+                        <span>当季新色系列</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-7.jpg" alt="">
+                        <span>厚底鞋系列</span>
+                    </li>
+                </ul>
+                <div class="centerline"></div>
+                <ul class="linenav">
+                    <li>
+                        <img src="../image/02-22.jpg" alt="">
+                        <span>经典款</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-23.jpg" alt="">
+                        <span>CHUCK 70</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-24.jpg" alt="">
+                        <span>ALL STAR</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-25.jpg" alt="">
+                        <span>ONE STAR</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-26.jpg" alt="">
+                        <span>JACK PURCELL</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-27.jpg" alt="">
+                        <span>PRO LEATHER</span>
+                    </li>
+                    <li>
+                        <img src="../image/02-28.jpg" alt="">
+                        <span>CONS</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-expanded nav-man">
+                <ul class="linenav">
+                    <li>
+                        <img src="../image/navman1.jpg" alt="">
+                        <span>踩得</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-2.jpg" alt="">
+                        <span>穿的</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-3.jpg" alt="">
+                        <span>戴的</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-4.jpg" alt="">
+                        <span>外套</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-5.jpg" alt="">
+                        <span>裤装</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-6.jpg" alt="">
+                        <span>当季新色系列</span>
+                    </li>
+                </ul>
+                <div class="centerline"></div>
+                <ul class="linenav">
+                    <li>
+                        <img src="../image/01-11.jpg" alt="">
+                        <span>经典款</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-12.jpg" alt="">
+                        <span>CHUCK 70</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-13.jpg" alt="">
+                        <span>ALL STAR</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-14.jpg" alt="">
+                        <span>ONE STAR</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-15.jpg" alt="">
+                        <span>JACK PURCELL</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-16.jpg" alt="">
+                        <span>PRO LEATHER</span>
+                    </li>
+                    <li>
+                        <img src="../image/01-17.jpg" alt="">
+                        <span>CONS</span>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="nav-expanded nav-child">
+                <ul class="linenav">
+                    <li>
+                        <img src="../image/3-1.png" alt="">
+                    </li>
+                    <li>
+                        <img src="../image/3-2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="../image/3-3.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="nav-expanded nav-chunjie">
+                <ul class="linenav">
+                    <li>
+                        <img src="../image/4-1.jpg" alt="">
+                        <span>男子优惠</span>
+                    </li>
+                    <li>
+                        <img src="../image/4-2.jpg" alt="">
+                        <span>女子优惠</span>
+                    </li>
+                    <li>
+                        <img src="../image/4-3.jpg" alt="">
+                        <span>儿童优惠</span>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+
+    </div>
+    <div id="body">
+        <div class="category-title-man ">
+            <h1>男的/628件商品</h1>
+        </div>
+
+        <div class="product-content">
+            <div class="product-content-left">
+                <div class="filterwrapper">
+                    <div class="filter-category">
+                        <div class="filtertop">
+                            <span>筛选</span>
+                        </div>
+
+                        <div class="resetbtn">
+
+                        </div>
+                    </div>
+                    <div class="filter-category-detail">
+                        <dl>
+                            <dt>系列</dt>
+                            <!-- <dd key='chuck70'>
+                                CHUCK 70
+                            </dd>
+                            <dd key='one-star'>
+                                one-star
+                            </dd>
+                            <dd key = 'JACK-purcell'>
+                                JACK-purcell
+                            </dd>
+                            <dd key = 'ALL-star'>
+                                ALL-star
+                            </dd>
+                            <dd key = 'CONS'>
+                                CONS
+                            </dd>
+                            <dd key = 'pro-leather'>
+                                pro-leather
+                            </dd> -->
+                            
+                        </dl>
+                        <dl>
+                            <dt>季节</dt>
+                            <!-- <dd key='chuck70'>
+                                CHUCK 70
+                            </dd>
+                            <dd key='one-star'>
+                                one-star
+                            </dd>
+                            <dd key = 'JACK-purcell'>
+                                JACK-purcell
+                            </dd>
+                            <dd key = 'ALL-star'>
+                                ALL-star
+                            </dd>
+                            <dd key = 'CONS'>
+                                CONS
+                            </dd>
+                            <dd key = 'pro-leather'>
+                                pro-leather
+                            </dd> -->
+                        </dl>
+                        <dl>
+                            <dt>儿童</dt>
+                            <!-- <dd key='chuck70'>
+                                CHUCK 70
+                            </dd>
+                            <dd key='one-star'>
+                                one-star
+                            </dd>
+                            <dd key = 'JACK-purcell'>
+                                JACK-purcell
+                            </dd>
+                            <dd key = 'ALL-star'>
+                                ALL-star
+                            </dd>
+                            <dd key = 'CONS'>
+                                CONS
+                            </dd>
+                            <dd key = 'pro-leather'>
+                                pro-leather
+                            </dd> -->
+                        </dl>
+                        <dl>
+                            <dt>产品优惠</dt>
+                            <!-- <dd key='chuck70'>
+                                CHUCK 70
+                            </dd>
+                            <dd key='one-star'>
+                                one-star
+                            </dd>
+                            <dd key = 'JACK-purcell'>
+                                JACK-purcell
+                            </dd>
+                            <dd key = 'ALL-star'>
+                                ALL-star
+                            </dd>
+                            <dd key = 'CONS'>
+                                CONS
+                            </dd>
+                            <dd key = 'pro-leather'>
+                                pro-leather
+                            </dd> -->
+                        </dl>
+                        <dl>
+                            <dt>价格</dt>
+                            <!-- <dd key='chuck70'>
+                                CHUCK 70
+                            </dd>
+                            <dd key='one-star'>
+                                one-star
+                            </dd>
+                            <dd key = 'JACK-purcell'>
+                                JACK-purcell
+                            </dd>
+                            <dd key = 'ALL-star'>
+                                ALL-star
+                            </dd>
+                            <dd key = 'CONS'>
+                                CONS
+                            </dd>
+                            <dd key = 'pro-leather'>
+                                pro-leather
+                            </dd> -->
+                        </dl>
+                    </div>
+
+                    
+                </div>
+
+                
+            </div>
+            <div class="product-content-right">
+                <div class="product-list-top">
+                    <div  class="sortbox">
+                        <div class="sorttitle">排序</div>
+                        <div class="sort-list">
+                            <a href="" class="active">默认</a>
+                            <a href="" class="">价格</a>
+                            <a href="">最喜欢</a>
+                            <a href="">最畅销</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- <dl >
+            <dt>
+                <img src="" alt="">
+            </dt>
+            <dd class="p-l-name"></dd>
+            <dd class="p-l-price"></dd>
+        </dl> -->
+    </div>
+
+  
+
+    
+</body>
+</html>
