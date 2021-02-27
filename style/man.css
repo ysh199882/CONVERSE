@@ -186,3 +186,22 @@ a{
 }
 
 
+
+.product-content-right dl div{
+    background-color: #464646;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
+    width: 100px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.product-content-right dl div:hover{
+    background: #000;
+}

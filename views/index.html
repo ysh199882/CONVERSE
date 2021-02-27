@@ -49,7 +49,6 @@
                         <span class="login">登录 &nbsp; </span>
                         <span>/ </span>
                         <span class="register"> &nbsp; 注册</span>
-
                     </div>
 
             <div class="loging" style="display: none;">
@@ -404,7 +403,7 @@
                 </div>
             </div>
             <!-- 如果需要分页器 -->
-            <div class="swiper-pagination"></div>
+            <!-- <div class="swiper-pagination"></div> -->
             
             <!-- 如果需要导航按钮 -->
             <div class="swiper-button-prev"></div>
@@ -542,21 +541,26 @@
   var mySwiper = new Swiper ('.swiper-container', {
     // direction: 'vertical', // 垂直切换选项
     loop: true, // 循环模式选项
-
     autoplay: 3000,
     
 
     // 如果需要分页器
-    pagination: {
-        el: '.swiper-pagination',
-    },
+    // pagination: {
+    //     el: '.swiper-pagination',
+    // },
     
     // 如果需要前进后退按钮
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
   })        
+
+  $('.swiper-button-prev').on('click', function () {
+      mySwiper.slidePrev()
+  })
+  $('.swiper-button-next').on('click', function () {
+      mySwiper.slideNext()
+  })
 </script>
 </html>

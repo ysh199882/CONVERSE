@@ -1,0 +1,143 @@
+.initinfo{
+    width: 486px;
+    height: 43.6px;
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+}
+
+.initinfo ul{
+    width: 486px;
+    height: 43.6px;
+    margin: 0 auto;
+}
+
+.initinfo ul li{
+    list-style: none;
+    width: 162px;
+    height: 43.6px;
+    float: left;
+}
+
+.initinfo ul li i{
+    width: 20px;
+    height: 20px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #fff;
+    position: relative;
+    left: 30px;
+    top: 10px;
+
+}
+
+.initinfo ul li .bla{
+    background-color: black;
+}
+
+.initinfo .initline{
+    background-color: black;
+    height: 1px;
+}
+
+.main{
+    width: 1000px;
+    position: relative;
+    top: 100px;
+    margin: auto;
+}
+
+.cheack-goods-box .checked-all{
+    font-size: 14px;
+    display: inline-block;
+    color: #333;
+    padding: 10px 0;
+    padding-left: 28px;
+}
+
+.cheack-goods-box span{
+    margin-left: 18px;
+    font-size: 14px;
+    color: #333;
+}
+
+.cheack-goods-box{
+    margin-bottom: 8px;
+}
+.cartlists .shopcart-list{
+    width: 942px;
+    height: 239px;
+    border-bottom: 1px dashed #605f5f;
+}
+
+.cartlists .shopcart-list .list-change{
+    width: 942px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.cartlists .shopcart-list .goods-box{
+    width: 942px;
+    height: 188px;
+    overflow: hidden;
+    padding-bottom: 28px;
+}
+
+
+
+.goods-box .goods-detial {
+    float: left;
+    padding-left: 30px;
+    padding-top: 20px;
+    width: 35%;
+}
+
+.goods-box .goods-detial h4 {
+    font-size: 18px;
+    color: #333;
+    line-height: 18px;
+    padding-bottom: 30px;
+}
+
+.goods-box {
+    overflow: hidden;
+    padding-bottom: 28px;
+}
+.goods-box .goods-price {
+    float: right;
+}
+
+.goods-box .goods-price p {
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #b63330;
+    text-align: right;
+}
+
+.goods-box .goods-detial p {
+    font-size: 14px;
+    color: #333;
+    line-height: 14px;
+    padding-bottom: 10px;
+}
+
+.goods-box .goods-img {
+    float: left;
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+.goods-box .goods-img img{
+    float: left;
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+
+/* .goods-box .goods-img a {
+    display: block;
+    width: 100%;
+    height: 100%;
+} */

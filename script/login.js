@@ -1,17 +1,18 @@
 
 
-    // var storage = window.localStorage;
-    // var mobile = storage['mobile'];
-    // if(mobile){
-    //     console.log(mobile);
-    //     $('.tologin').css('display','none')
-    //     $('.loging').css('display','block')
-    //     // $('register-box').css('display','block')
-    //     // $('.loging').prepend(`<span class="welcome">欢迎你，${storage['mobile']}</span>`)
-    // }else{
-    //     $('.tologin').css('display','block')
-    //     $('.loging').css('display','none')
-    // }
+$(() => {
+    var storage = window.localStorage;
+    var mobile = storage['mobile'];
+    if(mobile != undefined){
+        $('.tologin').css('display','none')
+        $('.loging').css('display','block')
+        $('.loging').prepend(`<span class="welcome">欢迎你，${mobile}</span>`)
+    }else{
+        $('.log-sign-button').css('display','block')
+        $('register-box').css('display','none')
+    }
+})
+ 
 $(() => { //加这个是等待页面内信息加载后才
 })
 
@@ -66,10 +67,11 @@ $('.logingmenu').mouseleave(function(){
 $('.exit').click(function(){
     alert('您已成功退出！')
     window.location.reload();
-    removeCookie('login')
    $('.welcome').remove()
     $('.loging').css('display','none')
     $('.log-sign-button').css('display','block')
+
+    localStorage.removeItem('mobile')
 })
 
 
@@ -148,11 +150,11 @@ $('.exit').click(function(){
     // }
     if((account === storage['mobile'] || account == storage['email']) && password === storage['pass']){
         
-        setCookie({
-            key: 'login',
-            val:'loginSucess',
-            days:15
-        })
+        // setCookie({
+        //     key: 'login',
+        //     val:'loginSucess',
+        //     days:15
+        // })
         
         //判断是否记住登录名
         if($('#keeplogin').prop('checked') != undefined){
@@ -182,7 +184,9 @@ $('.exit').click(function(){
         }
 
         alert('登录成功')
-        $('.loging').prepend(`<span class="welcome">欢迎你，${storage['mobile']}</span>`)
+        localStorage.setItem('mobile', account)
+        location.href = 'index.html'
+        // $('.loging').prepend(`<span class="welcome">欢迎你，${storage['mobile']}</span>`)
         //登录成功页面展示
         $('.header-expanded').slideUp('slow')
         $('.tologin').css('display','none')

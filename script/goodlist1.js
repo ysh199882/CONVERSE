@@ -4,8 +4,8 @@
 //     var mobile = storage['mobile'];
 //     if(mobile != undefined){
 //         $('.tologin').css('display','none')
-//         // $('.loging').css('display','block')
-//         $('.loging').prepend(`<span class="welcome">欢迎你，${storage['mobile']}</span>`)
+//         $('.loging').css('display','block')
+//         $('.loging').prepend(`<span class="welcome">欢迎你，${mobile}</span>`)
 //     }else{
 //         $('.log-sign-button').css('display','block')
 //         $('register-box').css('display','none')
@@ -29,6 +29,7 @@ $(function(){
                     </dt>
                     <dd class="p-l-name">${item.text}</dd>
                     <dd class="p-l-price">${item.prince}</dd>
+                    <div data-id="${item.id}">加入购物车</div>
                 </dl>
             </div>
                 `

@@ -26,7 +26,8 @@ $(function(){
                     <img src="${item.imgsrc}" alt="">
                 </dt>
                 <dd class="p-l-name">${item.text}</dd>
-                <dd class="p-l-price">${item.price}</dd>
+                <dd class="p-l-price">${item.prince}</dd>
+                <div data-id="${item.id}">加入购物车</div>
             </dl>`
             })
             $('.product-content-right').append(domStr)
